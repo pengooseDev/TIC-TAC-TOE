@@ -5,7 +5,7 @@ export const darkTheme: DefaultTheme = Object.freeze({
   background: '2b2b2b',
 });
 
-export const whiteTheme: DefaultTheme = Object.freeze({
+export const lightTheme: DefaultTheme = Object.freeze({
   text: '2b2b2b',
   background: 'white',
 });
