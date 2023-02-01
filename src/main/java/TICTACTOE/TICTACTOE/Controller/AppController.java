@@ -12,8 +12,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 public class AppController {
-  @GetMapping("/hello")
-  public String hello(){
-    return "진유진 마스터님 최고에요";
-  }
+    @GetMapping("/hello")
+    public String hello(){
+        return "hello meohyun";
+    }
 }
