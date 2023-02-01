@@ -1,20 +1,19 @@
-import React, {useEffect, useState} from 'react';
-import axios from "axios";
+import { ThemeProvider } from 'styled-components';
+import { darkTheme, lightTheme } from './theme';
+import GlobalStyle from './utils/GlobalStyle';
+import { isDarkAtom } from './atom';
+import { useRecoilState } from 'recoil';
+import Search from './Search';
 
 function App() {
-    const [hello, setHello] = useState('')
+  const [isDark, setIsDark] = useRecoilState(isDarkAtom);
 
-    useEffect(() => {
-        axios.get('/api/hello')
-            .then(response => setHello(response.data))
-            .catch(error => console.log(error))
-    }, []);
-
-    return (
-        <div>
-            백엔드에서 가져온 데이터입니다 : {hello}
-        </div>
-    );
+  return (
+    <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
+      <GlobalStyle />
+      <Search />
+    </ThemeProvider>
+  );
 }
 
 export default App;
