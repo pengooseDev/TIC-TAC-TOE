@@ -1,6 +1,9 @@
 import axios from 'axios';
+import API from '../constants/apiConstant';
 
 const sendGetRequest = async (END_POINT: string) => {
+  const { ERROR } = API;
+
   try {
     const searchResponse = await axios.get(END_POINT);
     const { data } = searchResponse;
@@ -9,8 +12,8 @@ const sendGetRequest = async (END_POINT: string) => {
   } catch (error) {
     const ErrorType = error as protocolError;
 
-    if (ErrorType.code === 'ENOENT') throw new Error('Unusable API EndPoint');
-    throw new Error('Protocol Error');
+    if (ErrorType.code === ERROR.ENONT) throw new Error(ERROR.ENONT_MESSAGE);
+    throw new Error(ERROR.PROTOCOL_MESSAGE);
   }
 };
 

@@ -7,6 +7,7 @@ import Search from './Search';
 
 function App() {
   const [isDark, setIsDark] = useRecoilState(isDarkAtom);
+
   return (
     <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
       <GlobalStyle />

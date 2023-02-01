@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import sendGetRequest from './api/get';
+import sendGetRequest from './utils/req/get';
 import API from './utils/constants/apiConstant';
 
 const Search = () => {
