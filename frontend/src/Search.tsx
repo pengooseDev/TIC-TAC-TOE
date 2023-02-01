@@ -1,17 +1,23 @@
 import { useState } from 'react';
-import axios from 'axios';
 import styled from 'styled-components';
-import getSearch from './api/getSearch';
+import sendGetRequest from './api/get';
+import API from './utils/constants/apiConstant';
 
 const Search = () => {
   const [searchData, setSearchData] = useState('');
+  const {
+    END_POINT: { HELLO },
+  } = API;
 
-  const res = getSearch();
+  const getSearch = async () => {
+    const response = await sendGetRequest(HELLO);
+    setSearchData((prev) => response);
+  };
 
   return (
     <>
       <div>
-        백엔드에서 가져온 데이터입니다 :{' '}
+        백엔드에서 가져온 데이터입니다 :
         {searchData ? searchData : '데이터 없음'}
       </div>
       <ToggleBtn onClick={getSearch}>getSearch</ToggleBtn>

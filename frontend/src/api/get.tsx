@@ -1,11 +1,8 @@
 import axios from 'axios';
-import API from '../utils/constants/apiConstant';
 
-const getSearch = async () => {
-  const { END_POINT } = API;
-
+const sendGetRequest = async (END_POINT: string) => {
   try {
-    const searchResponse = await axios.get(END_POINT.HELLO);
+    const searchResponse = await axios.get(END_POINT);
     const { data } = searchResponse;
 
     return data;
@@ -17,7 +14,7 @@ const getSearch = async () => {
   }
 };
 
-export default getSearch;
+export default sendGetRequest;
 
 interface protocolError {
   code: string;
