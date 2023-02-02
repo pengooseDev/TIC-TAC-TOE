@@ -11,7 +11,7 @@ const ThemeToggle = () => {
 
   return (
     <>
-      <input type="checkbox" id="toggle"></input>
+      <input type="checkbox" id="toggle" hidden></input>
       <ToggleButton onClick={toggleHandler} isDark={isDark} />
     </>
   );
@@ -30,6 +30,7 @@ const ToggleButton = styled.label.attrs({
   background: ${({ isDark, theme }) => (isDark ? theme.text : theme.text)};
   width: 30px;
   height: 30px;
+  position: absolute;
   padding: 10px;
   border-radius: 10px;
 `;
