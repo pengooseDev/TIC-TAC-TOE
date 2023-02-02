@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     background: ${({ theme }) => theme.background};
     color: ${({ theme }) => theme.text};
+    transition: ease-in-out 0.15s;
   }
 
   // Reset CSS

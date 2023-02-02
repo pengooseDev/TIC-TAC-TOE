@@ -4,6 +4,7 @@ import GlobalStyle from './utils/GlobalStyle';
 import { isDarkAtom } from './atom';
 import { useRecoilState } from 'recoil';
 import Search from './Search';
+import ThemeToggle from './components/ThemeToggle';
 
 function App() {
   const [isDark, setIsDark] = useRecoilState(isDarkAtom);
@@ -11,6 +12,7 @@ function App() {
   return (
     <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
       <GlobalStyle />
+      <ThemeToggle />
       <Search />
     </ThemeProvider>
   );
