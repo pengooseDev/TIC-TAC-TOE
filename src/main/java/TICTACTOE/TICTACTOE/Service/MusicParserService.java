@@ -1,11 +1,14 @@
 package TICTACTOE.TICTACTOE.Service;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.RequestMapping;
 
-@Slf4j
-@RequestMapping(value ="")
-public class MusicParserService {
-    public void jsonParsing(){
+import com.fasterxml.jackson.core.JsonProcessingException;
+import org.json.simple.JSONArray;
+import org.json.simple.parser.ParseException;
+import org.springframework.http.ResponseEntity;
 
-    }
+import java.io.IOException;
+
+public interface MusicParserService {
+    public JSONArray getList() throws ParseException, JsonProcessingException;
+
+
 }
