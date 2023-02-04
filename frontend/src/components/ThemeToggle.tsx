@@ -33,4 +33,7 @@ const ToggleButton = styled.label.attrs({
   position: absolute;
   padding: 10px;
   border-radius: 10px;
+  :hover {
+    cursor: pointer;
+  }
 `;
