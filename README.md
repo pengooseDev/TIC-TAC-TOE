@@ -1,2 +1,2 @@
 # TIC-TAC-TOE
-[> Repository Migration](https://github.com/PLMOW/TIC-TAC-TOE-FE)
+[> Repository Migration](https://github.com/orgs/PLMOW/repositories)
